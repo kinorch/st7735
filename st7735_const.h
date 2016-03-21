@@ -1,22 +1,22 @@
 #pragma once
 
-enum class ColorOrder
+typedef enum
 {
 	RGB = 0,
     BGR = 1,
-};
+} st7735_ColorOrder;
 
-enum class PixelFormat
+typedef enum
 {
 	Bit_12 = 3,
 	Bit_16 = 5,
 	Bit_18 = 6,
 	NoUsed = 7,
-};
+} st7735_PixelFormat;
 
-const uint8_t LCD_HEIGHT = 160;
-const uint8_t LCD_WIDTH = 128;
-const uint32_t SPI_MAX_FREQUENCY = 20*1000*1000;
+#define st7735_LcdHeigth		160
+#define st7735_LcdWidth 		128
+#define st7735_SpiMaxFrequency	20*1000*1000
 
 #define ST7735_NOP 0x0
 #define ST7735_SWRESET 0x01
@@ -39,7 +39,6 @@ const uint32_t SPI_MAX_FREQUENCY = 20*1000*1000;
 
 #define ST7735_COLMOD 0x3A
 #define ST7735_MADCTL 0x36
-
 
 #define ST7735_FRMCTR1 0xB1
 #define ST7735_FRMCTR2 0xB2
